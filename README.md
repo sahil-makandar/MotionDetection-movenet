@@ -6,8 +6,7 @@ MoveNet Lightning is a Python script that utilizes TensorFlow Lite and OpenCV to
 ## Installation
 1. **Clone the Repository**: 
     ```bash
-    git clone https://github.com/your_username/your_repository.git
-    cd your_repository
+    git clone https://github.com/mahaboobsabGoa/MotionDetection-movenet.git
     ```
 
 2. **Install Dependencies**:
