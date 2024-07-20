@@ -1,7 +1,7 @@
-# Motion Detection - TensorLite: Logo Annotator
+# Motion Detection - TensorLite: Keypoint Annotator
 
 ## Overview
-MoveNet Lightning is a Python script that utilizes TensorFlow Lite and OpenCV to perform real-time pose estimation on video frames using the MoveNet model. It annotates key points on the human body and dynamically adjusts the size and position of a logo image to overlay it on the chest area of the detected person. This ensures that the logo maintains a consistent appearance relative to the person's movements throughout the video.
+This Python script utilizes TensorFlow Lite and OpenCV to perform real-time pose estimation on video frames using the MoveNet model. It annotates key points on the human body and draws lines between them to visualize motion. This allows for real-time motion detection throughout the video.
 
 ## Installation
 1. **Clone the Repository**: 
@@ -10,12 +10,12 @@ MoveNet Lightning is a Python script that utilizes TensorFlow Lite and OpenCV to
     ```
 
 2. **Install Dependencies**:
-   ```bash
+    ```bash
     pip install -r requirements.txt
     ```
 
-3. **Provide Logo Image**:
-    - Replace `<your-logo.png>` with your desired logo image. Ensure it has an alpha channel for transparency.
+3. **Provide Input Video**:
+    - Ensure you have an input video file in MP4 format and replace `'<input-file.mp4>'` in the code with the actual path to your input video.
 
 ## Usage
 1. **Run the Script**:
@@ -24,7 +24,7 @@ MoveNet Lightning is a Python script that utilizes TensorFlow Lite and OpenCV to
     ```
 
 2. **Output**:
-    - The script will open a window displaying the real-time video feed annotated with key points and the dynamically adjusted logo on the chest area of the detected person.
+    - The script will open a window displaying the real-time video feed annotated with key points and connections between them.
     - It will also generate an `output_video.mp4` file in the same directory, which contains the annotated video.
 
 3. **Exit**:
@@ -34,13 +34,9 @@ MoveNet Lightning is a Python script that utilizes TensorFlow Lite and OpenCV to
 - **Model**: 
     - The script uses the MoveNet model in TensorFlow Lite format for single pose estimation.
 
-- **Logo Overlay**:
-    - The script dynamically adjusts the size and position of the logo to overlay it on the chest area of the detected person.
-    - The logo's size and position change according to the movements of the person, ensuring that it maintains a consistent appearance relative to the person's chest throughout the video.
-
-- **Visualization**:
-    - Key points are annotated with circles, and connections between them are drawn on the video frames.
-    - The connections represent body parts such as arms, legs, and the torso.
+- **Keypoint Annotation**:
+    - Key points on the human body are annotated with circles, and connections between them are drawn to visualize the body parts such as arms, legs, and the torso.
+    - This helps in real-time motion detection by clearly showing the movements of different body parts.
 
 ## Requirements
 - Python 3.x
